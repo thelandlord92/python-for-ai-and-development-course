@@ -4,11 +4,13 @@ import unittest
 class TestSentimentAnalyzer(unittest.TestCase):
     def test_sentiment_analyzer(self):
         # Test a positive case.
-        self.assertEqual((sentiment_analyzer(“I love working with Python”))["Label"], “SENT_POSITIVE”)
+        self.assertEqual(sentiment_analyzer("I love working with Python")["label"], "SENT_POSITIVE")
 
         # Test a negative case.
-        self.assertEqual((sentiment_analyzer(“I hate working with Python”))["Label"], “SENT_NEGATIVE”)
+        self.assertEqual(sentiment_analyzer("I hate working with Python")["label"], "SENT_NEGATIVE")
 
         # Test a neutral case.
-        self.assertEqual((sentiment_analyzer(“I am neutral on Python”))["Label"], “SENT_NEUTRAL”)
+        self.assertEqual(sentiment_analyzer("I am neutral on Python")["label"], "SENT_NEUTRAL")
 
+# Call the unit tests. 
+unittest.main()
